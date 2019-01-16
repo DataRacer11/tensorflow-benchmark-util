@@ -7,16 +7,8 @@ export CUDA_VISIBLE_DEVICES=""
 
 time mpirun \
 --allow-run-as-root \
--np 512 \
--H dgx1-1:80 \
--H dgx1-2:80 \
--H dgx1-3:80 \
--H dgx1-4:80 \
--H dgx1-5:80 \
--H dgx1-6:80 \
--H dgx1-7:80 \
--H dgx1-8:80 \
--H dgx1-9:80 \
+-np 2 \
+-H localhost:2 \
 -bind-to none \
 --map-by node \
 -mca plm_rsh_agent ssh \
